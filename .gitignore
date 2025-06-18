@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.so
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+
+# Environment
+.env
+.env.*
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Poetry
+poetry.lock
+
+# Virtual Environments
+.env/
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Migrations (optional – only if you regenerate them every time)
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Pytest cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+coverage.xml
+.coverage
+.cache
+
+# MyPy and other analysis tools
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+
+# Build
+build/
+dist/
+*.egg-info/
+.eggs/
