@@ -32,9 +32,6 @@ ENV/
 env.bak/
 venv.bak/
 
-# Migrations (optional – only if you regenerate them every time)
-**/migrations/*.py
-!**/migrations/__init__.py
 
 # Pytest cache
 .pytest_cache/
