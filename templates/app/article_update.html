@@ -7,4 +7,6 @@
         {{ form.as_p }}
         <button type="submit">Save</button>
     </form>
+    <a href="{% url 'home' %}">Back to list</a>
+    <a href="{% url 'delete_article' pk=article.id %}">Delete article</a>
 {% endblock content %}
