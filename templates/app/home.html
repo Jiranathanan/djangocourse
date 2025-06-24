@@ -4,11 +4,16 @@
 
     <a href="{% url 'create_article' %}">Create an article</a>
 
-    <ul>
-    {% for article in articles %}
-        <li> <a href="{% url 'update_article' pk=article.id %}">{{ article.title }}</a> with {{ article.word_count }} words.</li>
-    {% endfor %}
-    </ul>
+    {% if articles  %}
+        <ul>
+        {% for article in articles %}
+            <li> <a href="{% url 'update_article' pk=article.id %}">{{ article.title }}</a> with {{ article.word_count }} word{{ article.word_count | pluralize}}.</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>You have no articles yet</p>
+
+    {% endif %}
 {% endblock content %}
 
     
