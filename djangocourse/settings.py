@@ -50,6 +50,25 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+if DEBUG:
+    INSTALLED_APPS += [
+        "debug_toolbar"
+    ]
+
+    MIDDLEWARE += {
+        "debug_toolbar.middleware.DebugToolbarMiddleware"
+    }
+
+    import socket
+
+    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+
+    INTERNAL_IPS = [ip[:-1] + "1" for ip in ips] + ["127.0.0.1"]
+
+    # DEBUG_TOOLBAR_CONFIG = {
+    #     'SHOW_TOOLBAR_CALLBACK': lambda request: print(request.META)
+    # }
+
 ROOT_URLCONF = 'djangocourse.urls'
 
 TEMPLATES = [
